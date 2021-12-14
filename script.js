@@ -114,8 +114,8 @@ function responseReceivedHandler() {
     let gridline = {
       label: 'Super Sector Name',
       data: [],
-      borderColor: CHART_COLORS.red,
-      backgroundColor: CHART_COLORS_50_Percent.red,
+      borderColor: [],
+      backgroundColor: [],
       hidden: true
     };
     for (let i = dataArray.length-1; i>=0; i--) {
