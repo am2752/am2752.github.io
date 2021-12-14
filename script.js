@@ -114,8 +114,8 @@ function responseReceivedHandler() {
     let gridline = {
       label: 'Super Sector Name',
       data: [],
-      borderColor: CHART_COLORS.red,
-      backgroundColor: CHART_COLORS_50_Percent.red,
+      borderColor: [],
+      backgroundColor: [],
       hidden: true
     };
     for (let i = dataArray.length-1; i>=0; i--) {
@@ -141,11 +141,11 @@ function responseReceivedHandler() {
 }
 
 for (let i=0; i<Super_Sectors_Keys.length; i++) {
-  let startquery = "https://api.bls.gov/publicAPI/v2/timeseries/data/CEU"
-  let endquery = "00000001?registrationkey=1d6aa9856ec04dac9aa6ee99fdafda17"
+  let start = "https://api.bls.gov/publicAPI/v2/timeseries/data/CEU"
+  let end = "00000001?registrationkey=1d6aa9856ec04dac9aa6ee99fdafda17"
   let xhr = new XMLHttpRequest();
   xhr.addEventListener("load", responseReceivedHandler);
   xhr.responseType = "json";
-  xhr.open("GET", startquery+Super_Sectors_Keys[i]+endquery);
+  xhr.open("GET", start+Super_Sectors_Keys[i]+end);
   xhr.send();
 }
